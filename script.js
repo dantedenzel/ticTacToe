@@ -26,6 +26,14 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
     clickedCell.innerHTML = currentPlayer;
 }
 
+// function newWinnerAcceptPrize() {
+
+// }
+
+// function loserTakesL() {
+
+// }
+
 function handlePlayerChange() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
     statusDisplay.innerHTML = currentPlayerTurn();
