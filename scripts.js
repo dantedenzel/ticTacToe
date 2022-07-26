@@ -52,14 +52,14 @@ function handleResultValidation() {
         gameActive = false;
         return;
     }
-    
+
     let roundDraw = !gameState.includes("");
     if (roundDraw) {
         statusDisplay.innerHTML = drawMessage();
         gameActive = false;
         return;
     }
-    
+
     handlePlayerChange();
 }
 
@@ -78,15 +78,10 @@ function handleCellClick(clickedCellEvent) {
 function handleRestartGame() {
     gameActive = true;
     currentPlayer = "X";
-    gameState = ["", "", "", "", "", "", "", "", ""]
+    gameState = ["", "", "", "", "", "", "", "", ""];
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
 }
 
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.game--restart').addEventListener('click', handleRestartGame);
-
-
-
-
-
