@@ -11,25 +11,29 @@ let gameActive = true;
 let currentPlayer = "X";
 /*  We will store our current game state here, in the form of empty strings in an array will allow us to easily track played cells and validate the game state later on 
 */
-let gameState = ["", "", "", "", "", "", "", "", ""]
+let gameState = ["", "", "", "", "", "", "", "", ""];
 
 /* Declare messages to display to the user during the game.Since we have some dynamic factors in the messages, namely the current player, we have to declare them as FUNCTIONS, so that the actual message gets created with current data every time we need it. 
 */
 const winningMessage = () => `Player ${currentPlayer} has won!`;
 const drawMessage = () => `Game ended in a draw!`;
-const currentPlayerTurn = () => `Its's ${currentPlayer}'s turn`;
+const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
 // We set the initial message to let the players know whose turn it is
+
 statusDisplay.innerHTML = currentPlayerTurn();
+
 function handleCellPlayed(clickedCell, clickedCellIndex) {
+
 // We update our internal game state to reflect the played move, as well as update the user interface to reflect the played move
+
     gameState[clickedCellIndex] = currentPlayer;
     clickedCell.innerHTML = currentPlayer;
 }
 function handlePlayerChange() {
-    currentPlayer = currentPlayer == "X" ? "0" : "X";
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
     statusDisplay.innerHTML = currentPlayerTurn();
 }
-const winngConditions = [
+const winningConditions = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -46,7 +50,7 @@ function handleResultValidation() {
         let a = gameState[winCondition[0]];
         let b = gameState[winCondition[1]];
         let c = gameState[winCondition[2]];
-        if (a === '' || b ==='' || c === '') {
+        if (a === '' || b === '' || c === '') {
             continue;
         }
         if (a === b && b === c) {
@@ -55,9 +59,9 @@ function handleResultValidation() {
         }
     }
 if (roundWon) {
-    statusDisplay.innerHTML = winningMessage();
-    gameActive = false;
-    return;
+        statusDisplay.innerHTML = winningMessage();
+        gameActive = false;
+        return;
     }
     // Check whether there are any values in our game state array that are still not populated with a player sign
     let roundDraw = !gameState.includes("");
@@ -95,7 +99,7 @@ function handleRestartGame() {
     gameState = ["", "", "", "", "", "", "", "", ""]
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll('.cell')
-                .forEach(cell => cell.innerTML = "");
+                .forEach(cell => cell.innerHTML = "");
 }
 // Finally we add our event listeners to the actual game cells, as well as our restart button
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
