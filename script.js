@@ -26,7 +26,7 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
     clickedCell.innerHTML = currentPlayer;
 }
 
-// insert new media query field in order to show the new chenges made to the newer fields
+// insert new media query field in order to show the new changes made to the newer fields
 
 function handlePlayerChange() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
