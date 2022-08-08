@@ -37,6 +37,7 @@ text-align: center;
         transition-duration: 0.4s;
         width: 150px;
         height: 30px;
+        border-radius: 10%;
     }
     
     button:hover {
