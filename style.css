@@ -26,8 +26,9 @@ text-align: center;
     cursor: progress;
     line-height: 100px;
     font-size: 60px;
-}
+/* }
 
+/* DELETE AFTER ADDING NEW BUTTON */
 /* button {
     color: yellow;
     width: 250px;
