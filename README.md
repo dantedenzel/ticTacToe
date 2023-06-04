@@ -5,20 +5,20 @@
 
 // Declare variables that we can use to track the state of the game as its played
 
-// We will us gameActive to pause the game in case of an end scenario
+// Use 'gameActive' to pause the game in case of an end scenario
 
-// We will store our current player here, so we know who's turn it is
+// Store our current player here, so we know who's turn it is
 
-/*  We will store our current game state here, in the form of empty strings in an array will allow us to easily 
+/* Store our current game state here, in the form of empty strings in an array will allow us to easily 
 track played cells and validate the game state later on 
 */
 
 /* Declare messages to display to the user during the game.Since we have some dynamic factors in the messages, namely the current player, we have to declare them as FUNCTIONS, so that the actual message gets created with current data every time we need it. 
 */
 
-// We set the initial message to let the players know whose turn it is
+// Set the initial message to let the players know whose turn it is
 
-// We update our internal game state to reflect the played move, as well as update the user interface to reflect the played move
+// Update our internal game state to reflect the played move, as well as update the user interface to reflect the played move
 
 // Check whether there are any values in our game state array that are still not populated with a player sign
 
