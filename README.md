@@ -1,7 +1,7 @@
 # ticTacToe
 ** Pseudo Code **
 
-// store our game status element here to allow us to use it later
+// Store game status element here to allow us to use it later
 
 // Declare variables that we can use to track the state of the game as its played
 
@@ -22,7 +22,7 @@ track played cells and validate the game state later on
 
 // Check whether there are any values in our game state array that are still not populated with a player sign
 
-// if we get to here, we know that no ones won the game yet and that there are still moves to be played, so we continue by changing the current player.
+// If we get to here, we know that no ones won the game yet and that there are still moves to be played, so we continue by changing the current player.
 
 //  Save the clicked html element in a variable for later use
 
